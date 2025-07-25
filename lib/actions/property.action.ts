@@ -3,7 +3,6 @@
 import { db } from "@/drizzle/db";
 import { add_property } from "@/drizzle/schema";
 import { PropertyProps } from "@/types"
-import { revalidatePath } from "next/cache";
 
 export const addProperty =  async(params:PropertyProps) => { 
 
@@ -16,7 +15,6 @@ export const addProperty =  async(params:PropertyProps) => {
             throw new Error("Property not added successfully");
         }
 
-        revalidatePath('/');
         return {success: true, message: "Property added successfully",data:result}
 
     }catch(error){

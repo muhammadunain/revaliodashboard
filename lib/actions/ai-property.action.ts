@@ -72,7 +72,6 @@ export const processPropertyChat = async (
       message: aiResponse.replace(/FORM_DATA_COMPLETE:[\s\S]*$/i, '').trim(),
       extractedData,
       conversationComplete,
-    
     }
 
   } catch (error) {
