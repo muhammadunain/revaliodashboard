@@ -6,6 +6,7 @@ import data from '../../public/data.json'
 import AddProperty from '@/components/home/module/ui/AddProperty'
 import MessagingComponent from '@/components/home/module/ui/Message'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 const Home = () => {
   return (
@@ -14,9 +15,11 @@ const Home = () => {
         {/* Header section with AddProperty button aligned to right */}
         <div className="flex justify-end items-center px-4 lg:px-6 py-4">
           {/* <AddProperty /> */}
+          <Link href={'/create-property'}>
           <Button  className="cursor-pointer bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-md transition-colors" >
             Add Property
           </Button>
+          </Link>
         </div>
         
         {/* Main content with proper spacing and width constraints */}
